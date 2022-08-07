@@ -9,7 +9,7 @@ description: "Learn more about how environments can help you better filter issue
 
 `Environment` is a Sentry-supported tag that you can (and should) add to your SDK. Generally, the tag accepts any value, but it's intended to refer to your code deployments' naming convention, such as *development*, *testing*, *staging*, or *production*.
 
-Environments help you better filter issues, releases, and user feedback in the **Issue Details** page of [sentry.io](https://sentry.io). On that page, you can view information about a specific environment, focusing on the most recent release. If you’re using a multi-staged release process, you can also select a different default environment and set conditions that match the `environment` attribute to restrict alerts to only specific release stages.
+Environments help you better filter issues, performance metrics, releases, and user feedback in their respective pages in the Sentry UI. On each of those you can limit what you are seeing to a specific environment by picking it from the dropdown. You can also select a different default environment across all of the above views by clicking the 'Lock' button. Another area where the concept is highly useful is setting conditions that match the `environment` attribute to restrict alerts to only specific release stages.
 
 Use projects to separate different services or applications, and environments to separate different environments or release stages within each. If you've selected one or more projects in the filters of Sentry's web UI, the environment selector shows only environments associated with events from the selected projects.
 
@@ -27,7 +27,7 @@ Sentry automatically creates environments when it receives an event with the env
 
 If an issue has events from multiple environments, the issue will appear when you select any of those environments. Sentry defines an issue as a grouping of similar events. If you tag one or more events within an issue with a specific environment, that issue will appear in your view when filtered by that environment. For example, if an issue is composed of one event tagged with `Production` and one event tagged with `Staging`, the issue will appear in your view when filtering by `Production`, as well as by `Staging`.
 
-Also, the environment filter affects all issue-related metrics, such as the count of users affected, times series graphs, and event count.
+Also, the environment filter affects all issue-related metrics, such as the count of users affected, time series graphs, and event count.
 
 ### Releases
 
